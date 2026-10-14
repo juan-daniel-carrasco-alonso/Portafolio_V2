@@ -1405,20 +1405,42 @@ section,
     letter-spacing: 0.3px;
   }
 
-  /* Posicionamiento del logo DA SYSTEM en el Hero */
-.hero-logo-corner {
-  position: absolute;
-  top: 40px;      /* Separación desde la parte superior */
-  right: 50px;    /* Separación desde la derecha */
-  width: 140px;   /* Tamaño de tu logo (ajústalo según necesites) */
-  z-index: 10;    /* Asegura que quede por encima de la foto de fondo */
+/* --- ESTILOS PARA EL LOGO DA SYSTEM EN EL HERO --- */
+.hero {
+  position: relative; /* Asegura que los elementos absolutos se queden dentro del hero */
 }
 
-/* Ajuste responsivo para que no se vea gigante en celulares */
+/* La imagen de fondo debe cubrir todo, asegúrate de que tenga esta clase */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-logo-container {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  z-index: 10; /* Z-index alto para que esté por encima del fondo y el texto */
+}
+
+.hero-logo {
+  width: 100px; /* Tamaño base del logo */
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Ajuste para pantallas móviles */
 @media (max-width: 768px) {
-  .hero-logo-corner {
+  .hero-logo-container {
     top: 20px;
     right: 20px;
-    width: 90px;
+  }
+  .hero-logo {
+    width: 70px; /* Logo más pequeño en celulares */
   }
 }
