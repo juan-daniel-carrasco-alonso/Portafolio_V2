@@ -1405,42 +1405,29 @@ section,
     letter-spacing: 0.3px;
   }
 
-/* --- ESTILOS PARA EL LOGO DA SYSTEM EN EL HERO --- */
-.hero {
-  position: relative; /* Asegura que los elementos absolutos se queden dentro del hero */
-}
-
-/* La imagen de fondo debe cubrir todo, asegúrate de que tenga esta clase */
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero-logo-container {
+  .hero-logo-container {
   position: absolute;
   top: 30px;
   right: 40px;
-  z-index: 10; /* Z-index alto para que esté por encima del fondo y el texto */
+  z-index: 999; /* Lo subimos al máximo para que pase el filtro oscuro del fondo */
 }
 
-.hero-logo {
-  width: 100px; /* Tamaño base del logo */
-  height: auto;
-  opacity: 0.9;
+/* El selector '.hero img.hero-logo' asegura que reescriba el diseño base */
+.hero img.hero-logo {
+  position: static !important; 
+  width: 140px !important; /* Ajusta el tamaño aquí */
+  height: auto !important;
+  inset: auto !important;
+  object-fit: contain !important;
+  opacity: 1 !important;
 }
 
-/* Ajuste para pantallas móviles */
 @media (max-width: 768px) {
   .hero-logo-container {
     top: 20px;
     right: 20px;
   }
-  .hero-logo {
-    width: 70px; /* Logo más pequeño en celulares */
+  .hero img.hero-logo {
+    width: 90px !important;
   }
 }
