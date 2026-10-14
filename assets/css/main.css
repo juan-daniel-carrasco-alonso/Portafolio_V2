@@ -1409,6 +1409,6 @@ section,
   position: absolute;
   top: 30px;
   right: 40px;
-  z-index: 999; /* Lo subimos al máximo para que pase el filtro oscuro del fondo */
+  z-index: 999; /* Lo subimos al máximo para que pase el filtro oscuro del fondo del portafolio */
 }
   
