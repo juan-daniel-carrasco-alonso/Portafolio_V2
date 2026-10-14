@@ -1411,23 +1411,4 @@ section,
   right: 40px;
   z-index: 999; /* Lo subimos al máximo para que pase el filtro oscuro del fondo */
 }
-
-/* El selector '.hero img.hero-logo' asegura que reescriba el diseño base */
-.hero img.hero-logo {
-  position: static !important; 
-  width: 140px !important; /* Ajusta el tamaño aquí */
-  height: auto !important;
-  inset: auto !important;
-  object-fit: contain !important;
-  opacity: 1 !important;
-}
-
-@media (max-width: 768px) {
-  .hero-logo-container {
-    top: 20px;
-    right: 20px;
-  }
-  .hero img.hero-logo {
-    width: 90px !important;
-  }
-}
+  
