@@ -1404,3 +1404,21 @@ section,
     pointer-events: none;
     letter-spacing: 0.3px;
   }
+
+  /* Posicionamiento del logo DA SYSTEM en el Hero */
+.hero-logo-corner {
+  position: absolute;
+  top: 40px;      /* Separación desde la parte superior */
+  right: 50px;    /* Separación desde la derecha */
+  width: 140px;   /* Tamaño de tu logo (ajústalo según necesites) */
+  z-index: 10;    /* Asegura que quede por encima de la foto de fondo */
+}
+
+/* Ajuste responsivo para que no se vea gigante en celulares */
+@media (max-width: 768px) {
+  .hero-logo-corner {
+    top: 20px;
+    right: 20px;
+    width: 90px;
+  }
+}
